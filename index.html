@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiomeSound</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-box">
+        <h1>BiomeSound client</h1>
+        <label for="address">Connectie adres</label>
+        <br>
+        <input id="address" type="text" value="195.201.80.168:5001">
+        <br>
+        <br>
+        <label for="name">Minecraft naam</label>
+        <br>
+        <input id="name" type="text">
+        <br>
+        <br>
+        <label for="volume">Volume</label>
+        <br>
+        <input id="volume" type="range" min="0" max="1" value="0.5" step="0.01" oninput="changeVol(this.value)">
+        <h3>Status: <span id="status">Niet verbonden</span></h3>
+        <button onclick="connect()">Verbinden</button>
+    </div>
+
+    <div id="player"></div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
